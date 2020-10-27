@@ -1,0 +1,54 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<main class="container">
+    <!--Message-->
+    <% if(messages.length>0){%>
+        <div class="alerr alert-danger">
+            <% messages %>
+        </div>
+    
+    <% } %>
+    <div class="row">
+        <div class= "offfet-mid-4 col-md-4">
+            <h1>Please Register</h1>
+            <form method="POST" autocomplete="OFF">
+                <fieldset class="form-group">
+                    <label for="username">Username: </label>
+                    <input type="text" class="from-control"
+                    name="username" placeholder="Enter username"
+                    id="username" required>
+                </fieldset>
+
+                
+                <fieldset class="from-group">
+                    <label for="email">Email: </label>
+                    <input type="email" clsaa= "from-control"
+                    name="email" placeholder="Enter email Address"
+                    id="email" required>
+                </fieldset>
+
+                <fieldset class="from-group">
+                    <label for="displayName">Display Name: </label>
+                    <input type="text" clsaa= "from-control"
+                    name="displayName" placeholder="Enter email Name"
+                    id="displayName" required>
+                </fieldset>
+
+                <fieldset class="form-group text-right">
+                    <input type="submit" class="btn btn-success" value="Register">
+                    <a href="/">
+                        <input type="button" class="btn btn-warning" value="cancel">
+                        
+                    </a>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
